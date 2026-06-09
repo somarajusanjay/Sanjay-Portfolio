@@ -620,7 +620,7 @@ body {
   place-items: center;
   border-radius: 50%;
   border: 1px solid rgba(37, 99, 235, 0.18);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(123, 1, 1, 0.495);
   color: var(--text);
   cursor: pointer;
   backdrop-filter: blur(16px);
@@ -630,7 +630,7 @@ body {
 }
 
 .carousel-btn:hover {
-  background: rgba(239, 246, 255, 0.96);
+  background: rgba(183, 7, 4, 0.744);
   border-color: rgba(95, 141, 247, 0.5);
   transform: translateY(-50%) scale(1.05);
 }
@@ -1394,10 +1394,6 @@ body {
     min-height: 140px;
   }
 
-  .photo-icon {
-    font-size: 2rem;
-  }
-
   .feature-images {
     grid-auto-columns: minmax(240px, 88%);
   }
@@ -1427,6 +1423,64 @@ body {
   .form-textarea {
     padding: 14px 15px;
   }
+}
+
+@media (max-width: 430px) {
+  .brand-bar {
+    flex-direction: column;
+  }
+
+  .header-socials {
+    gap: 10px;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-photo {
+    width: min(250px, calc(100vw - 52px));
+    height: min(250px, calc(100vw - 52px));
+  }
+
+  .profile-copy h1 {
+    font-size: clamp(2.05rem, 12vw, 2.8rem);
+  }
+
+  .gallery-title,
+  #about > .section-label,
+  #education > .section-label,
+  #projects > .section-label,
+  #contact > .section-label {
+    font-size: clamp(1.55rem, 9vw, 2.1rem);
+  }
+
+  .pill-row {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-icon {
+    font-size: 2rem;
+  }
+
+  .feature-images {
+    grid-auto-columns: minmax(220px, 92%);
+  }
+
+  .contact-info p {
+    align-items: flex-start;
+  }
+
+  .contact-link-text {
+    overflow-wrap: anywhere;
+  }
+}
+
 }
 
 @media (max-width: 430px) {
