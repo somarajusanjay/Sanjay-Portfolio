@@ -1,7 +1,87 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Thank You</title><link rel="stylesheet" href="styles.css"></head>
-<body style="display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center;">
-<div><h1>Thank You!</h1><p>Your message has been sent successfully.</p>
-<a href="index.html" class="btn">Back to Home</a></div>
-</body></html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Thank You</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<meta http-equiv="refresh" content="8; url=index.html">
+
+<style>
+
+body{
+
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+
+}
+
+.box{
+
+padding:40px;
+border-radius:20px;
+background:rgba(15,15,20,.8);
+backdrop-filter:blur(12px);
+
+}
+
+.count{
+
+color:#00d4ff;
+font-size:18px;
+margin-top:20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="box">
+    
+        <h1>✅ Thank You!</h1>
+        
+        <p>Your message has been sent successfully.</p>
+        
+        <p>You will automatically return to the homepage in</p>
+        
+        <h2 id="timer">8</h2>
+        
+        <p class="count">seconds...</p>
+    
+    </div>
+    
+    <script>
+    
+        let time=8;
+        
+        const timer=document.getElementById("timer");
+        
+        setInterval(()=>{
+        
+        time--;
+        
+        timer.innerHTML=time;
+        
+        if(time<=0){
+        
+        window.location="index.html";
+        
+        }
+        
+        },1000);
+
+</script>
+
+</body>
+
+</html>
