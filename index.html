@@ -249,13 +249,27 @@
     <section class="contact-section" id="contact">
       <p class="section-label">Contact Me</p>
       <div class="contact-container">
-        <form class="contact-form" action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="thankyou.html">
-          <input type="text" placeholder="Your Name" class="form-input" required />
-          <input type="email" placeholder="Your Email" class="form-input" required />
-          <textarea placeholder="Your Message" class="form-textarea" rows="6" required></textarea>
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/somarajusanjay@gmail.com" method="POST" encType="multipart/form-data">
+          <input type="text" id="name" name="name" placeholder="Your Name" class="form-input" required />
+          <input type="email" id="email" name="email" placeholder="Your Email" class="form-input" required />
+          <textarea id="message" name="message" placeholder="Your Message" class="form-input" required></textarea>
+          <input
+          type="file"
+          id="attachment"
+          name="attachment"
+          accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.zip"
+         />
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
+          <input
+          type="hidden"
+          name="_next"
+          value="https://somarajusanjay.github.io/Sanjay-Portfolio/thankyou.html"
+          />         
+
           <button type="submit" class="submit-btn">Send Message</button>
+          <p id="form-status"></p>
         </form>
         <div class="contact-info">
           <p>
@@ -283,6 +297,4 @@
   </button>
 
   <script src="script.js"></script>
-<script src="script.js"></script>
 </body>
-
