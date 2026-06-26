@@ -215,69 +215,23 @@ scrollBtn.addEventListener('click', () => {
   });
 });
 
-// Contact Form Submission
-// ===============================
+// Contact form: let FormSubmit handle the POST, file upload, and redirect.
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
 
 if (contactForm && formStatus) {
-  contactForm.addEventListener('submit', event => {
-    // event.preventDefault();
-
+  contactForm.addEventListener('submit', () => {
     const submitButton = contactForm.querySelector('button[type="submit"]');
     if (submitButton) {
-      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+      submitButton.setAttribute('aria-busy', 'true');
     }
 
     formStatus.textContent = 'Sending message...';
     formStatus.classList.remove('error');
     formStatus.classList.remove('success');
-
-    const formData = new FormData(contactForm);
-    const actionUrl = 'https://formsubmit.co/somarajusanjay@gmail.com';
-
-    fetch(actionUrl, {
-      method: 'POST',
-      body: formData
-    })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(() => {
-        formStatus.textContent = 'Message sent successfully!';
-        formStatus.classList.add('success');
-        contactForm.reset();
-      })
-      .catch(error => {
-        console.error('Form submit error:', error);
-        formStatus.textContent = 'Message failed. Please try again later.';
-        formStatus.classList.add('error');
-      })
-      .finally(() => {
-        if (submitButton) {
-          submitButton.disabled = false;
-        }
-      });
   });
 }
-// // Contact form submission
-// const contactForm = document.querySelector('.contact-form');
-// if (contactForm) {
-//   contactForm.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     const name = contactForm.querySelector('[placeholder="Your Name"]').value;
-//     const email = contactForm.querySelector('[placeholder="Your Email"]').value;
-//     const message = contactForm.querySelector('[placeholder="Your Message"]').value;
-    
-//     if (name && email && message) {
-//       alert(`Thank you ${name}! Your message has been sent. We'll get back to you at ${email} soon.`);
-//       contactForm.reset();
-//     }
-//   });
-// }
 const featureCarousel = document.querySelector('.feature-carousel');
 const featureImages = document.querySelector('#featureImages');
 const carouselPrev = document.querySelector('.carousel-btn-prev');
