@@ -1481,56 +1481,23 @@ body {
   }
 }
 
+
+/* Responsive additions */
+header,.navbar{padding:12px 5%!important;}
+@media (min-width:1200px){
+.hero,.home{padding-top:90px}
+h1{font-size:clamp(2.5rem,4vw,4rem)}
 }
-
-@media (max-width: 430px) {
-  .brand-bar {
-    flex-direction: column;
-  }
-
-  .header-socials {
-    gap: 10px;
-  }
-
-  .social-link {
-    width: 40px;
-    height: 40px;
-  }
-
-  .profile-photo {
-    width: min(250px, calc(100vw - 52px));
-    height: min(250px, calc(100vw - 52px));
-  }
-
-  .profile-copy h1 {
-    font-size: clamp(2.05rem, 12vw, 2.8rem);
-  }
-
-  .gallery-title,
-  #about > .section-label,
-  #education > .section-label,
-  #projects > .section-label,
-  #contact > .section-label {
-    font-size: clamp(1.55rem, 9vw, 2.1rem);
-  }
-
-  .pill-row {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .feature-images {
-    grid-auto-columns: minmax(220px, 92%);
-  }
-
-  .contact-info p {
-    align-items: flex-start;
-  }
-
-  .contact-link-text {
-    overflow-wrap: anywhere;
-  }
+img{max-width:100%;height:auto}
+@media (max-width:992px){
+.container,.hero,.home{padding-left:20px;padding-right:20px}
+}
+@media (max-width:768px){
+.nav-links,.menu{flex-direction:column}
+section{padding:60px 20px}
+h1{font-size:2.2rem}
+}
+@media (max-width:576px){
+h1{font-size:1.8rem}
+button,.btn{width:100%}
 }
