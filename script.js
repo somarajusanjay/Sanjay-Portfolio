@@ -222,7 +222,7 @@ const formStatus = document.getElementById('form-status');
 
 if (contactForm && formStatus) {
   contactForm.addEventListener('submit', event => {
-    event.preventDefault();
+    // event.preventDefault();
 
     const submitButton = contactForm.querySelector('button[type="submit"]');
     if (submitButton) {
@@ -234,7 +234,7 @@ if (contactForm && formStatus) {
     formStatus.classList.remove('success');
 
     const formData = new FormData(contactForm);
-    const actionUrl = 'https://formsubmit.co/soma@gmail.com';
+    const actionUrl = 'https://formsubmit.co/somarajusanjay@gmail.com';
 
     fetch(actionUrl, {
       method: 'POST',
