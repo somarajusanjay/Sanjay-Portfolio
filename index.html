@@ -249,7 +249,9 @@
     <section class="contact-section" id="contact">
       <p class="section-label">Contact Me</p>
       <div class="contact-container">
-        <form class="contact-form">
+        <form class="contact-form" action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="thankyou.html">
           <input type="text" placeholder="Your Name" class="form-input" required />
           <input type="email" placeholder="Your Email" class="form-input" required />
           <textarea placeholder="Your Message" class="form-textarea" rows="6" required></textarea>
@@ -281,4 +283,6 @@
   </button>
 
   <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
+
